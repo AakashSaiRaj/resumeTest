@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #545E6C;
+    background: #f5f5f5;
+    font-size: 14px;
+    padding: 30px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.headbar{
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+  }
+  
+.headskill {
+    text-align: right;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: white;
+    height: 20px;
+}
+
+.html {width: 80%; background-color: #1D5D9B; height: 20px;}
+.nodejs {width: 90%; background-color: #1D5D9B; height: 20px;}
+.web3 {width: 70%; background-color: #1D5D9B; height: 20px;}
+.webrtc {width: 50%; background-color: #1D5D9B; height: 20px;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    color: #1D5D9B;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1D5D9B;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.skillset .level-title {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: white;
+}
+
+
+.wrapper {
+    background: #1D5D9B;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-wrapper {
+    background: #1D5D9B;
+    position: absolute;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    min-height: 800px;
+    color: #fff;
+}
+
+.sidebar-wrapper a {
+    color: #fff;
+}
+
+.sidebar-wrapper .profile-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar-wrapper .name {
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .tagline {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .profile {
+    margin-bottom: 15px;
+}
+
+.sidebar-wrapper .contact-list .fa {
+    margin-right: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.sidebar-wrapper .contact-list li {
+    margin-bottom: 15px;
+}
+
+.sidebar-wrapper .contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .contact-list .email .fa {
+    font-size: 14px;
+}
+
+.sidebar-wrapper .container-block {
+    padding: 30px;
+}
+
+.sidebar-wrapper .container-block-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.sidebar-wrapper .degree {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.sidebar-wrapper .education-container .item {
+    margin-bottom: 15px;
+}
+
+.sidebar-wrapper .education-container .item:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .education-container .meta {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.sidebar-wrapper .education-container .time {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.sidebar-wrapper .languages-container .lang-desc {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar-wrapper .languages-list {
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .languages-list li {
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .languages-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .interests-list {
+    margin-bottom: 0;
+}
+
+.sidebar-wrapper .interests-list li {
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .interests-list li:last-child {
+    margin-bottom: 0;
+}
+
+.main-wrapper {
+    background: #fff;
+    padding: 60px;
+    padding-right: 300px;
+}
+
+.main-wrapper .section-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1D5D9B;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.main-wrapper .section-title .fa {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    display: inline-block;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: #1D5D9B;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 16px;
+    position: relative;
+    top: -2px;
+}
+
+.main-wrapper .section {
+    margin-bottom: 60px;
+}
+
+.main-wrapper .experiences-section .item {
+    margin-bottom: 30px;
+}
+
+.main-wrapper .upper-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.main-wrapper .job-title {
+    color: #1D5D9B;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.main-wrapper .time {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #1D5D9B;
+}
+
+.main-wrapper .company {
+    margin-bottom: 10px;
+    color: #1D5D9B;
+}
+
+.main-wrapper .project-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.main-wrapper .projects-section .intro {
+    margin-bottom: 30px;
+}
+
+.main-wrapper .projects-section .item {
+    margin-bottom: 15px;
+}
+
+.skillset .item {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .sidebar-wrapper {
+        position: static;
+        width: inherit;
+    }
+    .main-wrapper {
+        padding: 30px;
+    }
+    .main-wrapper .time {
+        position: static;
+        display: block;
+        margin-top: 5px;
+    }
+    .main-wrapper .upper-row {
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .skillset .level-title {
+        display: inline-block;
+        float: left;
+        width: 30%;
+        margin-bottom: 0;
+    }
+    .skillset .level-bar {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        position: relative;
+        top: 1px;
+    }
+}
+
+
+.profile-img {
+    max-width: 100px;
+    margin-bottom: 15px;
+    border: 0px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+                <div class="profile-container"> <img class="profile-img" src="https://i.ibb.co/t4HhQH2/zkdbmojzk5q91.jpg"/>
+
+                <h1 class="name">Peter Grifin</h1>
+                <h3 class="tagline">Software Developer</h3> </div>
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto:petergrifin@gmail.com">petergrifin@gmail.com</a></li>
+                    <li class="phone"><i class="fa fa-phone"></i><a href="tel:8450028475">8450028475</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://linkedin.com" target="_blank">petergrifin</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="http://github.com" target="_blank">petergrifin</a></li>
+                </ul>
+            </div>
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                <div class="item">
+                    <h4 class="degree">B.Tech in Data Analytics</h4>
+                    <h5 class="meta">GITAM University</h5>
+                    <div class="time">2017 - 2021</div>
+                    <h5 class="meta">CGPA: 9.3</h5>
+                </div>
+                <div class="item">
+                    <h4 class="degree">12th Grade</h4>
+                    <h5 class="meta">Oakridge</h5>
+                    <div class="time">2016 - 2017</div>
+                    <h5 class="meta">CGPA: 9.4</h5>
+                </div>
+                <div class="item">
+                    <h4 class="degree">10th Grade</h4>
+                    <h5 class="meta">Oakridge</h5>
+                    <div class="time">2014 - 2015</div>
+                    <h5 class="meta">CGPA: 9.6</h5>
+                </div>
+            </div>
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Achievements</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                   <li>Telugu</li>
+                   <li>Japanese</li>
+                   <li>Hindi</li>
+                   <li>English</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Objective</h2>
+                <div class="summary">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic perferendis nesciunt in asperiores repellat. Nostrum aspernatur nobis quibusdam rem?</p>
+                </div>
+            </section>
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills</h2>
+                <div class="skillset">
+                    <div class="item">
+                        <h3 class="level-title">React JS</h3>
+                        <div class="headbar">
+                            <div class="headskill html">80%</div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="level-title">NodeJS</h3>
+                        <div class="headbar">
+                            <div class="headskill nodejs">90%</div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="level-title">Web3</h3>
+                        <div class="headbar">
+                            <div class="headskill web3">70%</div>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="level-title">Web RTC</h3>
+                        <div class="headbar">
+                            <div class="headskill webrtc">50%</div>
+                          </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Work Experience</h2>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Technical Lead</h3>
+                            <div class="time">2022 - Present</div>
+                        </div>
+                        <div class="company">Adobe</div>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, deleniti!</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Senior Software Developer</h3>
+                            <div class="time">2019 - 2022</div>
+                        </div>
+                        <div class="company">Atlassian</div>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, deleniti!</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Web3 Developer</h3>
+                            <div class="time">2017 - 2019</div>
+                        </div>
+                        <div class="company">Coinbase</div>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, deleniti!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-newspaper-o"></i>Publications</h2>
+                <div class="item"> <span class="project-title"><a href="https://ieeexplore.ieee.org/abstract/document/10142728" target="_blank">An Analytical Study of Regression Techniques towards H-1B Visa Prediction.</a></span> Publisher: <span class="project-tagline">IEEE</span></div>
+                <div class="item"> <span class="project-title"><a href="https://ieeexplore.ieee.org/abstract/document/10073837" target="_blank">Work Visa Analysis using Machine Learning Techniques.</a></span> Publisher: <span class="project-tagline">IEEE</span></div>
+            </section>
+
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
+                <div class="item"> <span class="project-title"><a href="https://www.google.co.in" target="_blank">Lorem ipsum</a></span> - <span class="project-tagline">Lorem ipsum dolor sit amet consectetur adipisicing.</span></div>
+                <div class="item"> <span class="project-title"><a href="https://www.google.co.in" target="_blank">Lorem ipsum</a></span> - <span class="project-tagline">Lorem ipsum dolor sit amet consectetur adipisicing.</span></div>
+                <div class="item"> <span class="project-title"><a href="https://www.google.co.in" target="_blank">Lorem ipsum</a></span> - <span class="project-tagline">Lorem ipsum dolor sit amet consectetur adipisicing.</span></div>
+                <div class="item"> <span class="project-title"><a href="https://www.google.co.in" target="_blank">Lorem ipsum</a></span> - <span class="project-tagline">Lorem ipsum dolor sit amet consectetur adipisicing.</span></div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
